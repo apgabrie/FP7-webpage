@@ -30,7 +30,10 @@ Briefly describe the existing technology you utilized, and how you used it. Prov
 Each team member should identify a favorite line of code, expression, or procedure written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody?
 Remember code looks something like this:
 ```scheme
-(map (lambda (x) (foldr compose functions)) data)
+(define (draw-sprites sprite-list img offset)
+  (foldr (lambda (x y) (place-image/align ((sprite-draw x) x) (- (sprite-realX x) offset) (sprite-realY x) 'left 'top y)) 
+         img
+         sprite-list))
 ```
 ####Lillian (another team member)
 This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....
