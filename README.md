@@ -30,7 +30,7 @@ Briefly describe the existing technology you utilized, and how you used it. Prov
 Each team member should identify a favorite line of code, expression, or procedure written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody?
 Remember code looks something like this:
 
-This is the function that draws all of the sprites. It uses the higher order procedure accumulate to place all of the sprites at the proper x and y coordinates by using the draw function each sprite has. It also takes into account the offset from the far left boundry of the level which ended up making implementing side-scrolling much easier than anticipated. Because of that, it's my favorite line.
+This is the function that draws all of the sprites. It uses the higher order procedure accumulate to place all of the sprites at the proper x and y coordinates, using the draw function each sprite has. It also takes into account the offset from the far left boundry of the level. This consideration ended up making implementing side-scrolling much easier than anticipated, and because of that, it's my favorite line.
 
 ```scheme
 (define (draw-sprites sprite-list img offset)
