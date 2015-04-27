@@ -31,8 +31,10 @@ Each team member should identify a favorite line of code, expression, or procedu
 Remember code looks something like this:
 ```scheme
 (define (draw-sprites sprite-list img offset)
-  (foldr (lambda (x y) 
-           (place-image/align ((sprite-draw x) x) (- (sprite-realX x) offset) (sprite-realY x) 'left 'top y)) 
+  (foldr (lambda (x y) (place-image/align ((sprite-draw x) x) 
+                                          (- (sprite-realX x) offset) 
+                                          (sprite-realY x) 
+                                          'left 'top y)) 
          img
          sprite-list))
 ```
